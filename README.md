@@ -53,4 +53,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Setup for GitHub
 
-Replace `your-username` with your actual GitHub username before using the file. Save this content in a file named `README.md` in your project's root directory. This will provide a detailed overview and instructions for your project when viewed on GitHub.
+Replace `Boomika A` with your actual GitHub username before using the file. Save this content in a file named `README.md` in your project's root directory. This will provide a detailed overview and instructions for your project when viewed on GitHub.
