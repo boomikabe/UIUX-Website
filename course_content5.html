@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+            <h2>Advanced UI Design Techniques</h2>
+            <h3>Advanced UI design techniques build upon fundamental principles to create sophisticated and visually compelling interfaces. Here are some advanced techniques:</h3>
+            <p>Microinteractions</p>
+            <h3>Design subtle animations or visual feedback that respond to user actions, such as button clicks, hover effects, or form validation. Microinteractions enhance usability, provide feedback, and add personality to the interface.</h3>
+            <p>Custom Transitions and Animations</p>
+            <h3>Create custom transitions and animations to guide users through the interface and provide visual cues. Use techniques such as motion design principles, easing curves, and choreographed animations to create smooth and engaging transitions.</h3>
+            <p>Dynamic Content and Data Visualization</p>
+            <h3>Design interfaces that dynamically update and adapt to changing content or user interactions. Use data visualization techniques, such as charts, graphs, and interactive infographics, to present complex information in a visually engaging way.
+            </h3>
+            <p>Responsive Typography</p>
+            <h3>Implement responsive typography techniques to ensure that text scales and adapts to different screen sizes and resolutions. Use techniques such as fluid typography, variable fonts, and typographic hierarchies to create visually balanced and readable text.</h3>
+            <p>Layered Interfaces and Depth Effects</p>
+            <h3>Create depth and dimensionality in the interface using layered design elements, shadows, and depth effects. Use techniques such as parallax scrolling, stacked cards, and depth of field effects to create visually rich and immersive experiences.</h3>
+            <p>Advanced Color Techniques</p>
+            <h3>Explore advanced color theory principles and techniques to create visually harmonious color schemes and palettes. Use techniques such as color gradients, duotones, and color psychology to evoke specific emotions and enhance the visual impact of the interface.</h3>
+            <p>Creative Layouts and Grid Systems</p>
+            <h3>Experiment with creative layout techniques and grid systems to break away from traditional design patterns. Use asymmetrical layouts, modular grids, and dynamic grid systems to create visually interesting and innovative designs.</h3>
+            <p>Interactive Prototyping and Motion Design</p>
+            <h3>Create interactive prototypes that simulate real-world interactions and animations. Use prototyping tools such as Adobe XD, Figma, or Principle to prototype complex interactions, transitions, and animations.</h3>
+            <div class="video-container-grid">
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/kbZejnPXyLM?si=OvVckK9JbCZJ4LvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/yYwEnLYT55c?si=bz2Uur8hsHVrjMAT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/ENA50EGKUoI?si=92DWh7ZA1QwaJgf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Complete Assignment</h2>
+            <p>Step1: Please complete the quiz to receive the certification.</p>
+            <button class="btn" onclick="goToAssignment()">Go to Quiz</button>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        // Function to show assignment popup
+        function showAssignmentPopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+        }
+
+        // Function to navigate to assignment.html
+        function goToAssignment() {
+            window.location.href = "quiz.html";
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

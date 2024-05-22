@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - Design Assignment</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #030303;
+        }
+
+        h1{
+            color: #f6069a;
+            margin-bottom: 10px;
+            text-align: center; 
+        }
+        h2 {
+            color: #f6069a;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            color: aqua;
+            margin: 0;
+        }
+
+        /* Assignment Instructions Styles */
+        .instructions {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+           
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+
+        #github-link-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #github-link-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        #github-link {
+            width: 80vh;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        #github-link:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        #github-link[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #github-link[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #github-link[type="submit"]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Design Assignment: UI/UX Course</h1>
+    <div class="container">
+        <div class="instructions">
+            <h2>Assignment Instructions:</h2>
+            <ol>
+                <li>Design a UI/UX project based on the concepts learned in the course.</li>
+                <li>Create a GitHub repository to host your project.</li>
+                <li>Commit your UI/UX design files to the repository, including any necessary assets.</li>
+                <li>Write a README.md file describing your project, design decisions, and any additional information.
+                </li>
+                <li>Submit the GitHub repository link using the form provided below.</li>
+            </ol>
+            <p>Upon successful submission and review, you will receive the certificate via email.</p>
+            <p>Deadline for submission: [Insert Deadline Date]</p>
+            <form id="github-link-form">
+                <label for="github-link">GitHub Repository Link:</label>
+                <input type="text" id="github-link" name="github-link" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const githubLinkForm = document.getElementById('github-link-form');
+
+        githubLinkForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const githubLink = githubLinkForm.querySelector('#github-link').value;
+
+            // You can implement logic here to handle the submission of the GitHub link
+            // Once submitted, notify the user and process the certificate issuance
+            alert('GitHub repository link submitted successfully. Certificate will be sent upon review.');
+            githubLinkForm.reset(); // Reset the form after submission
+        });
+    </script>
+</body>
+
+</html>

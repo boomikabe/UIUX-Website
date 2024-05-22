@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+
+            <h2>Interaction Design Principles</h2>
+
+            <h3>Interaction design focuses on creating engaging and meaningful interactions between users and digital interfaces. Here are some key principles of interaction design</h3>
+            <p>Clarity</p>
+
+            <h3>Interactions should be clear and easy to understand, guiding users through tasks without ambiguity. Use clear language, intuitive icons, and visual cues to communicate functionality and feedback effectively.</h3>
+
+            <p>Goal-Driven Design</p>
+
+            <h3>Design interactions that help users achieve their goals efficiently. Understand user tasks and objectives, and ensure that interactions support users in completing these tasks effectively.</h3>
+            <p>Learnability</p>
+
+            <h3>Design interfaces that are easy for users to learn, regardless of their level of expertise. Use familiar metaphors, clear affordances, and progressive disclosure to guide users through the interface and facilitate learning.</h3>
+            <p>Delight and Engagement</p>
+
+            <h3>Aim to create delightful and engaging interactions that delight users and foster emotional connections with the interface. Use animations, microinteractions, and playful elements to enhance user enjoyment and satisfaction. </h3>
+            <p>Progressive Disclosure</p>
+
+            <h3>Present information and functionality gradually, revealing more advanced features as users become more familiar with the interface. Progressive disclosure helps manage complexity, reduce cognitive overload, and improve usability. </h3>
+            <div class="video-container-grid">
+
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/YT_cqMd-cXQ?si=X1u2b3_r7RzJv2Hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/DlQ75eTM_AM?si=iYgD6mN9lOJvV_5P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/UsV_UBkiKSk?si=WVwAnS5v-W9qeycB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        </div>
+
+        <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Completed Phase4</h2>
+            <button class="btn" onclick="goToAssignment()">Go to Phase5</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Function to show assignment popup
+    function showAssignmentPopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    // Function to navigate to assignment.html
+    function goToAssignment() {
+        window.location.href = "course_content5.html";
+        overlay.style.display = 'none';
+    }
+</script>
+
+</body>
+
+
+</html>

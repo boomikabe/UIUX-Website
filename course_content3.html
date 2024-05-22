@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+
+            <h2>UX Research Techniques</h2>
+
+            <h3>UX research techniques are essential for understanding user behaviors, needs, and preferences, which in turn inform the design process. Here are some common UX research techniques
+            </h3>
+            <p>User Interviews</p>
+
+            <h3>Conduct one-on-one interviews with users to gain insights into their goals, motivations, pain points, and behaviors. Structured, semi-structured, or unstructured interviews can be used to gather qualitative data.</h3>
+
+            <p>Surveys and Questionnaires</p>
+
+            <h3>Distribute surveys to a larger audience to collect quantitative data on user demographics, preferences, and satisfaction levels. Surveys can be useful for gathering data quickly and identifying trends.</h3>
+            <p>Contextual Inquiry</p>
+
+            <h3>Observe users in their natural environment while they interact with a product or perform tasks related to the design. Contextual inquiry provides valuable insights into real-world usage scenarios and workflow patterns. </h3>
+            <p>Usability Testing</p>
+
+            <h3> Conduct usability tests to evaluate the effectiveness and efficiency of a product's interface. Users are asked to perform specific tasks while researchers observe their interactions and gather feedback on usability issues.</h3>
+            <p>Card Sorting</p>
+
+            <h3> Ask users to organize content or features into categories that make sense to them. Card sorting helps identify how users mentally categorize information, which informs the design of navigation structures and information architecture.</h3>
+            <div class="video-container-grid">
+
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/kQ_6faxhyIw?si=npTn_Xv3LeZ7cxQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/B7eWE2JJp8M?si=ftl6TRNrfw1-96If" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        
+
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/OtUWbsvCujM?si=MLRPr24plZjFKtY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 
+
+                </div>
+                
+            </div>
+        </div>
+
+        
+        </div>
+
+        <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Completed Phase3</h2>
+            <button class="btn" onclick="goToAssignment()">Go to Phase4</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Function to show assignment popup
+    function showAssignmentPopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    // Function to navigate to assignment.html
+    function goToAssignment() {
+        window.location.href = "course_content4.html";
+        overlay.style.display = 'none';
+    }
+</script>
+
+</body>
+
+
+</html>

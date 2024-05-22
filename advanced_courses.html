@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced UI/UX Courses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Advanced UI/UX Courses</h1>
+    <nav>
+      <ul>
+        <li><a href="design.html">Home</a></li>
+        <li><a href="beginner_courses.html">Beginner</a></li>
+        <li><a href="intermediate_courses.html">Intermediate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="courses">
+  <div class="container">
+    <div class="filters">
+      <label for="amount-filter">Filter by Amount:</label>
+      <select id="amount-filter">
+        <option value="all">All</option>
+        <option value="free">Free</option>
+        <option value="paid">Paid</option>
+      </select>
+
+      <label for="duration-filter">Filter by Duration:</label>
+      <select id="duration-filter">
+        <option value="all">All</option>
+        <option value="short">Short (1-3 hours)</option>
+        <option value="medium">Medium (4-6 hours)</option>
+        <option value="long">Long (7+ hours)</option>
+      </select>
+    </div>
+
+    <div class="course-cards">
+      <!-- Course cards for advanced level -->
+      <div class="course-card" data-amount="paid" data-duration="long">
+        <img src="https://assets-global.website-files.com/648b07b602810d848d5617a5/64de59364024763af65f42a4_64b8a34e806237ea74fd6281_07_Prototypes_with_Sections.jpeg" alt="Course 7">
+        <div class="coursecontent">
+        <h3>UI Prototyping with Figma</h3>
+        <p>Master UI prototyping using Figma software.</p>
+        <p>Duration: 12 hours</p>
+        <p>Price: ₹1200</p>
+        <a href="uiuxfundamental6.html" class="btn">View Now!</a></div>
+      </div>
+      <div class="course-card" data-amount="paid" data-duration="medium">
+        <img src="https://media.licdn.com/dms/image/D5612AQE8PUOZz78taQ/article-cover_image-shrink_720_1280/0/1691132754460?e=2147483647&v=beta&t=brbgoNgXaJ4gdtBuO-XQba6w1g5rf5dWCR1MV8fr3jQ" alt="Course 8">
+        <div class="coursecontent">
+        <h3>Design Thinking Workshop</h3>
+        <p>Participate in a hands-on design thinking workshop.</p>
+        <p>Duration: 6 hours</p>
+        <p>Price: ₹600</p>
+        <a href="uiuxfundamental7.html" class="btn">View Now!</a></div>
+      </div>
+      <div class="course-card" data-amount="paid" data-duration="long">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*gyimdro6vZlQsMSc" alt="Course 9">
+        <div class="coursecontent">
+        <h3>User-Centered Design Strategies</h3>
+        <p>A comprehensive course focusing on user-centered design strategies and principles.</p>
+        <p>Duration: 12 hours</p>
+        <p>Price: ₹1000</p>
+        <a href="uiuxfundamental8.html" class="btn">View Now!</a></div>
+    </div>
+    
+      <!-- Add more advanced courses here -->
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 UI/UX Courses. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const durationFilter = document.getElementById("duration-filter");
+    const courseCards = document.querySelectorAll(".course-card");
+  
+    durationFilter.addEventListener("change", function () {
+      const selectedValue = this.value;
+      courseCards.forEach(card => {
+        const durationText = card.querySelector(".coursecontent p:nth-of-type(2)").textContent;
+        const duration = parseInt(durationText.match(/\d+/)[0]); // Extracting the duration number
+        if (selectedValue === "all" || checkDuration(duration, selectedValue)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  
+    function checkDuration(duration, filter) {
+      switch (filter) {
+        case "short":
+          return duration >= 1 && duration <= 3;
+        case "medium":
+          return duration >= 4 && duration <= 6;
+        case "long":
+          return duration >= 7;
+        default:
+          return false;
+      }
+    }
+  });
+  
+    document.addEventListener("DOMContentLoaded", function () {
+      const amountFilter = document.getElementById("amount-filter");
+      const courseCards = document.querySelectorAll(".course-card");
+  
+      amountFilter.addEventListener("change", function () {
+        const selectedValue = this.value;
+        courseCards.forEach(card => {
+          if (selectedValue === "all" || card.dataset.amount === selectedValue) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  
+  </script>
+  
+</body>
+<style>
+    /* General styles */
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+h3{
+  color: #f32376;
+}
+header {
+  background-color: #000000; /* Green background */
+  color: #f32376;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fffcfc;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px 0;
+}
+
+/* Filter styles */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters label {
+  margin-right: 10px;
+}
+
+.filters select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #f32376; /* Highlight color */
+}
+
+
+.course-cards {
+  margin: 0px 100px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  display: grid;
+  padding-top: 40px ;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 25px;
+}
+
+.course-card {
+  background-color: #e9c5e9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #000000;
+  padding-bottom: 30px;
+  transition: transform 0.3s ease;
+  max-width: 360px; /* Decrease width */
+  height: 350px; /* Adjust height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coursecontent {
+  padding: 20px;
+  text-align: center;
+  height: 100%; /* Fill the entire height of the course card */
+}
+
+.coursecontent h3,
+.coursecontent p,
+.coursecontent a {
+  margin-top: 0; /* Remove default top margin for headings, paragraphs, and links */
+  margin-bottom: 10px; /* Add margin bottom for spacing between elements */
+}
+
+.coursecontent .btn {
+  display: inline-block;
+  background-color: #f32376;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: auto; /* Align button to the bottom */
+  transition: background-color 0.3s ease;
+}
+
+.course-card img {
+  width: 100%;
+  max-height: 200px;
+  
+}
+
+.coursecontent .btn:hover {
+  background-color: #d71c6a;
+}
+
+footer {
+  background-color: #000000; /* Dark background */
+  color: #fff; /* Light text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+</style>
+</html>

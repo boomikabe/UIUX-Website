@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+            <h2>Responsive Web Design</h2>
+            <h3>Responsive web design is an approach to designing and building websites that ensures optimal viewing and
+                interaction experiences across a wide range of devices and screen sizes. The goal of responsive design
+                is to create a seamless user experience regardless of whether a person is accessing the website on a
+                desktop computer, laptop, tablet, or smartphone.</h3>
+            <p>Fluid Grids</p>
+            <h3>Instead of fixed-width layouts, responsive designs use fluid grids that adjust proportionally to the
+                screen size. This allows elements on the webpage to resize and reposition themselves dynamically.</h3>
+            <p>Flexible Images and Media</p>
+            <h3>Images, videos, and other media should also be flexible, scaling up or down to fit different screen
+                sizes without losing quality or breaking the layout.</h3>
+            <p>Media Queries</p>
+            <h3> CSS media queries are used to apply different styles based on the characteristics of the device, such
+                as screen width, height, orientation, and resolution. This enables designers to tailor the layout and
+                presentation for different devices.</h3>
+            <p>Mobile-First Approach</p>
+            <h3>Many designers adopt a mobile-first approach, where they prioritize designing for mobile devices and
+                then progressively enhance the design for larger screens. This ensures that the website performs well on
+                smaller devices and provides a solid foundation for scaling up.</h3>
+            <p>Breakpoints</p>
+            <h3> Breakpoints are specific points at which the layout of the website changes to accommodate different
+                screen sizes. Designers define breakpoints using media queries to ensure that the design remains
+                visually appealing and functional across various devices.</h3>
+            <div class="video-container-grid">
+                <video class="video" controls>
+                    <source src="video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="video" controls>
+                    <source src="video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="video" controls>
+
+                    <source src="video6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+
+    </div>
+    <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Complete Assignment</h2>
+            <p>Step1: Please complete the quiz to receive the certification.</p>
+            <button class="btn" onclick="goToAssignment()">Go to Quiz</button>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        // Function to show assignment popup
+        function showAssignmentPopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+        }
+
+        // Function to navigate to assignment.html
+        function goToAssignment() {
+            window.location.href = "quiz.html";
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

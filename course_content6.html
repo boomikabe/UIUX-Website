@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+
+            <h2>UI Prototyping with Figma</h2>
+
+            <h3>Prototyping with Figma is a powerful way to create interactive and realistic representations of your designs. Here's how you can use Figma for UI prototyping</h3>
+            <p>Create Frames</p>
+
+            <h3>Start by creating frames for each screen or state of your UI design. Frames act as containers for your design elements and represent individual screens or components within your prototype.</h3>
+
+            <p>Design Elements</p>
+
+            <h3>Add design elements such as buttons, input fields, text, images, and icons to your frames using Figma's design tools and libraries. Ensure that your design elements are properly organized and grouped within each frame.</h3>
+            <p>Interactions and Links</p>
+
+            <h3>Use Figma's prototyping features to add interactions and links between frames. Select an element (e.g., a button) and use the "Prototype" tab to define interactions such as "On Click" or "On Hover" events. Then, link the interaction to another frame to create transitions between screens.</h3>
+            <p>Transitions and Animations</p>
+
+            <h3>Customize transitions and animations to create realistic interactions in your prototype. Choose from various transition options such as slide, dissolve, push, or smart animate to define how elements move and change between screens.</h3>
+            <p>Hover Effects</p>
+
+            <h3> Add hover effects to elements to simulate interactivity and provide feedback to users. Define hover states for buttons, links, or interactive elements using Figma's "Interactive Components" feature to create dynamic and engaging prototypes.</h3>
+            <p>Scrolling and Overflow</p>
+            <h3>Use Figma's scrolling and overflow features to simulate scrollable content within frames. Define scrollable areas and set scrolling behavior to create prototypes that accurately represent long or dynamic content such as websites or mobile apps.</h3>
+            <p>Device Preview</p>
+            <h3>Preview your prototype in Figma's interactive preview mode to test interactions and transitions. Use the device preview feature to simulate how your prototype will look and behave on different devices and screen sizes.</h3>
+            <p>Share and Gather Feedback</p>
+            <h3>Share your prototype with stakeholders or team members to gather feedback and insights. Use Figma's sharing features to generate a shareable link or embed the prototype directly into presentations or documents.</h3>
+            <div class="video-container-grid">
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/5GzLA_JkZ14?si=mDl4VQiQXy-fN_77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/N-Qn0jtSQ8o?si=CSjjxhbAJAxJ5NLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/L22lDu3QX2c?si=iWb_vVUZrqtjNTQO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        </div>
+
+        
+        </div>
+
+        <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Completed Phase6</h2>
+            <button class="btn" onclick="goToAssignment()">Go to Phase7</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Function to show assignment popup
+    function showAssignmentPopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    // Function to navigate to assignment.html
+    function goToAssignment() {
+        window.location.href = "course_content7.html";
+        overlay.style.display = 'none';
+    }
+</script>
+
+</body>
+
+
+</html>

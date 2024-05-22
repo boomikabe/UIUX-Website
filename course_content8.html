@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+            
+            <h2>User-Centered Design Strategies</h2>
+
+            <h3>User-centered design (UCD) strategies prioritize the needs, preferences, and behaviors of users throughout the design process. Here are some key strategies to implement UCD effectively</h3>
+            <p>User Research</p>
+
+            <h3> Conduct thorough user research to gain insights into the target audience's goals, motivations, behaviors, and pain points. Use techniques such as interviews, surveys, observations, and usability testing to understand user needs and preferences.</h3>
+
+            <p>Empathy Building</p>
+
+            <h3>Foster empathy for users by immersing yourself in their experiences and perspectives. Encourage design teams to step into the shoes of users, empathize with their challenges, and prioritize their well-being and satisfaction.</h3>
+            <p>Iterative Design Process</p>
+
+            <h3>Embrace an iterative design process that involves continuous testing, feedback, and refinement. Start with low-fidelity prototypes to gather early feedback from users, then iterate and refine designs based on their input throughout the development cycle.</h3>
+            <p>Prototyping and Testing</p>
+
+            <h3>Use prototyping tools and techniques to create interactive prototypes of the interface and test them with users. Gather feedback on usability, functionality, and user satisfaction to identify areas for improvement and refinement.</h3>
+            <p>User Personal Development</p>
+
+            <h3>Create user personas based on research findings to represent key user segments and their characteristics. Use personas to guide design decisions, prioritize features, and ensure that the interface meets the needs of different user groups. </h3>
+            <p>Contextual Inquiry</p>
+
+            <h3> Conduct contextual inquiries to observe users in their natural environment and understand how they interact with products or services in real-world situations. Gain insights into workflow patterns, pain points, and opportunities for improvement. </h3>
+            <p>Co-Design Workshops</p>
+
+            <h3> Facilitate co-design workshops with users and stakeholders to involve them in the design process and generate ideas collaboratively. Use techniques such as brainstorming, sketching, and prototyping to foster creativity and innovation.</h3>
+            <p>Accessibility Considerations</p>
+
+            <h3> Incorporate accessibility principles into the design process to ensure that the interface is usable by users of all abilities. Consider factors such as screen reader compatibility, keyboard navigation, color contrast, and alternative text for images.</h3>
+            <div class="video-container-grid">
+
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/-f_nXBzaTPw?si=G3RYWD1vukNeZkvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/dhcnMoPp584?si=IqPX3a1UZfbGys4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/LnaLPPmY3_Q?si=G27ZvYpL65rJTGii" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        </div>
+
+
+    </div>
+    <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Complete Assignment</h2>
+            <p>Step1: Please complete the quiz to receive the certification.</p>
+            <button class="btn" onclick="goToAssignment()">Go to Quiz</button>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        // Function to show assignment popup
+        function showAssignmentPopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+        }
+
+        // Function to navigate to assignment.html
+        function goToAssignment() {
+            window.location.href = "quiz.html";
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

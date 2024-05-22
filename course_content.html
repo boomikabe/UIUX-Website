@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+
+            <h2>Introduction to UI/UX </h2>
+
+            <h3>Get an overview of UI/UX design principles and their importance in creating user-friendly interfaces.
+            </h3>
+            <p>What is UI Design?</p>
+
+            <h3>UI design deals with the look and feel of a product's interface. It involves designing every visual
+                element that users interact with, such as buttons, icons, colors, typography, and layout. UI designers
+                aim to create interfaces that are aesthetically pleasing, consistent, and easy to navigate.</h3>
+
+            <p>What is UX Design?</p>
+
+            <h3>UX design focuses on the overall experience users have with a product. It encompasses the entire journey
+                users take, from their first interaction with the product to accomplishing their goals. UX designers
+                conduct research to understand user needs, create wireframes and prototypes to test ideas, and iterate
+                based on feedback to optimize the user experience.
+            </h3>
+            <div class="video-container-grid">
+                <video class="video" controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-container">
+                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/8ly4Z3e3cPw?si=QRJgDZLb1Q6Jmd75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"
+                        src="https://www.youtube.com/embed/c9Wg6Cb_YlU?si=MTmG71PCgYhbtiIC" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                
+            </div>
+        </div>
+
+        
+        </div>
+
+        <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Completed Phase1</h2>
+            <button class="btn" onclick="goToAssignment()">Go to Phase2</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Function to show assignment popup
+    function showAssignmentPopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    // Function to navigate to assignment.html
+    function goToAssignment() {
+        window.location.href = "course_content1.html";
+        overlay.style.display = 'none';
+    }
+</script>
+
+</body>
+
+
+</html>

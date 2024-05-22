@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Course - E-Learning Website</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f7f7f7;
+        }
+        h1{
+            color: #271b53;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #09e5fe;
+            margin-bottom: 10px;
+        }  
+        h3{
+            color: #000000;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }  
+        p {
+            color: #f21373;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+        .video-container {
+            margin-bottom: 40px;
+        }
+
+        .video-container h2 {
+            font-size: 24px;
+        }
+
+        .video-container p {
+            font-size: 16px;
+        }
+
+        .video-container-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .video {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color:  #f21373;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        /* Popup Styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to UI/UX Course - E-Learning Website</h1>
+        <div class="video-container">
+
+            <h2>Design Thinking Workshop</h2>
+
+            <h3>Design thinking workshops are collaborative sessions aimed at generating innovative solutions to complex problems by applying the principles of design thinking. Here's a structured approach to conducting a design thinking workshop</h3>
+            <p>Define the Problem</p>
+
+            <h3>Start by clearly defining the problem or challenge that the workshop will address. Ensure that participants have a shared understanding of the problem statement and its scope.
+            </h3>
+
+            <p>Assemble a Diverse Team</p>
+
+            <h3>Invite participants from diverse backgrounds, including designers, developers, stakeholders, and end-users. Diversity of perspectives can lead to more creative solutions and foster collaboration.</h3>
+            <p>Empathize with Users</p>
+
+            <h3>Begin the workshop by empathizing with the end-users of the product or service. Encourage participants to share insights from user research, interviews, or personas to understand user needs, goals, and pain points.</h3>
+            <p>Generate Ideas</p>
+
+            <h3>Facilitate ideation sessions to generate a wide range of ideas and potential solutions to the problem. Use techniques such as brainstorming, mind mapping, or sketching to encourage creativity and exploration.</h3>
+            <p>Prototype Solutions</p>
+
+            <h3> Encourage participants to prototype their ideas by creating low-fidelity representations of potential solutions. Provide materials such as paper, markers, or digital prototyping tools to facilitate the prototyping process.</h3>
+            <p>Test and Iterate</p>
+            <h3>Conduct user testing sessions to gather feedback on the prototypes and identify strengths, weaknesses, and opportunities for improvement. Encourage participants to iterate on their designs based on user feedback and insights.</h3>
+            <p>Facilitation Techniques</p>
+            <h3>Use facilitation techniques to keep the workshop focused, productive, and inclusive. Set ground rules for participation, manage time effectively, and encourage active listening and collaboration among participants.</h3>
+            <p>Visualization and Storytelling</p>
+            <h3>Encourage participants to visualize their ideas and tell stories about their solutions. Use techniques such as storyboarding, role-playing, or scenario mapping to bring concepts to life and make them more tangible.</h3>
+            <div class="video-container-grid">
+
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/zq_huoLp_kE?si=QVIMaQK6BIrvQPAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190"  src="https://www.youtube.com/embed/w7l8qEj1JX0?si=OSCpQME4rB9c-9K2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="100%" height="190" src="https://www.youtube.com/embed/BV5xItgCoTE?si=MBQGBtf8rVDsdaGT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        </div>
+
+        <button class="btn" onclick="showAssignmentPopup()">Course Complete</button>
+
+    <!-- Popup for Assignment Message -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Completed Phase7</h2>
+            <button class="btn" onclick="goToAssignment()">Go to Phase8</button>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Function to show assignment popup
+    function showAssignmentPopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+
+    // Function to navigate to assignment.html
+    function goToAssignment() {
+        window.location.href = "course_content8.html";
+        overlay.style.display = 'none';
+    }
+</script>
+
+</body>
+
+
+</html>
