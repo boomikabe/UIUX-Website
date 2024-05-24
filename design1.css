@@ -14,7 +14,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url("https://raw.githubusercontent.com/boomikabe/UIUX-Website/main/pic1.jpg");
+    background-image: url("https://raw.githubusercontent.com/boomikabe/UIUX-Website/main/pic2.jpeg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -313,7 +313,7 @@ nav .fas{
 }
 @media only screen and (max-width: 600px) {
     #header{
-        background-image: url(image/phone-background.png);
+        background-image: url("https://raw.githubusercontent.com/boomikabe/UIUX-Website/main/pic2.jpeg");
         
     }
     .header-text{
